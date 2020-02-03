@@ -1,0 +1,44 @@
+*{box-sizing: border-box;}
+
+html,body{
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    cursor: url("../images/button.png"), auto;
+}
+
+/* navigation */
+.nav {
+    width: 100%;
+    height: auto;
+    padding: 2%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-grow: 3;
+}
+
+.ic {margin: 0 10px 4px 0;}
+
+.home, .works, .contri, .contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav button{
+    background-color: #000;
+    transition: background-color .3s;
+    color: #ffffff;
+    padding: 0.5% 3% 0.5% 3%;
+    text-decoration: none;
+    border: 1px transparent;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    z-index: 9;
+}
+
+.nav button:hover {background-color: #808080; cursor: url("../images/button.png"), auto;}

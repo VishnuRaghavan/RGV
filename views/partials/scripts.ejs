@@ -1,0 +1,37 @@
+<script type="text/javascript" src="/js/jquery.js"></script>
+
+<!-- load particles when navigated to corresponding pages-->
+<% if (title === 'RGV') { %> 
+<script src="/js/particles.js"></script>
+<script>
+    // loading particles 
+    particlesJS.load('particles-js','/js/lines_bubbles.json', ()=>{
+        console.log('particles json loaded successfuly');
+    });    
+</script>
+<% } else if(title === 'WORK' || title === 'CONTRIBUTIONS') { %>
+<script src="/js/particles.js"></script>
+<script>
+    // loading particles 
+    particlesJS.load('particles-js','/js/space.json', ()=>{
+        console.log('particles json loaded successfuly');
+    });    
+
+    $(document).ready(() => {
+        const subContainerHeight = $('.sub-container').outerHeight(true);
+        const navHeight = $('.nav').outerHeight(true);
+        $('#particles-js').innerHeight(subContainerHeight + navHeight);
+    });
+
+</script>
+<% } %> 
+<!-- load particles when navigated to corresponding pages -->
+
+<!-- load sketch if navigated to contact -->
+<% if(title === 'CONTACT') { %>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+    <script type="text/javascript" src="/js/sketch.js"></script>
+<% } %>  
+<!-- load sketch if navigated to contact -->
+
+<script src="/js/script.js"></script>
