@@ -70,7 +70,7 @@ hooks:
 #   in the script specified in "location" starting from the root of the 
 #   revision's file bundle.
   ApplicationStop:
-    - location: scripts/stop.sh
+    - location: /scripts/stop.sh
       timeout: 120
       runas: ec2-user
 # During the BeforeInstall deployment lifecycle event, run the commands 
