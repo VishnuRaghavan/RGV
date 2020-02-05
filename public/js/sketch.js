@@ -1,29 +1,32 @@
 
 let angle = 0;
-const rect_width = 45;
+let rect_width = 45;
 let maxDistance;
 let cnv;
+ 
+if(window.matchMedia("(max-width: 320px)").matches) {
+    rect_width = 15;
+} else if(window.matchMedia("(max-width: 375px) and (min-width: 321px)").matches) {
+    rect_width = 20;
+} else if(window.matchMedia("(max-width: 425px) and (min-width: 376px)").matches) {
+    rect_width = 25;
+} else if(window.matchMedia("(max-width: 768px) and (min-width: 426px)").matches) {
+    rect_width = 30;
+} else if(window.matchMedia("(max-width: 1024px) and (min-width: 769px)").matches) {
+    rect_width = 35;
+} else if(window.matchMedia("(max-width: 1440px) and (min-width: 1025px)").matches) {
+    rect_width = 45;
+}
+
+
 
 function setup(){
-
-    const padding = windowWidth * (2 / 100);
-
-    const window_width = windowWidth - (padding * 2);
-    const window_height = (windowHeight - (padding * 2)) - 400;
-
+    const padding = displayWidth * (2 / 100);
+    const window_width = displayWidth - (padding * 2);
+    const window_height = (displayHeight - (padding * 2)) - 400;
     cnv = createCanvas(window_width, window_height, WEBGL);
     cnv.parent('sketch-holder');
     maxDistance = dist(0, 0, 800, 800);
-}
-
-function centerCanvas() {
-    var x = (windowWidth - width) / 2;
-    var y = (windowHeight - height) / 2;
-    cnv.position(x, y);
-}
-
-function windowResized() {
-    centerCanvas();
 }
 
 function draw() {
@@ -37,7 +40,6 @@ function draw() {
     translate(width / 50 , height / 2, -80);
     rotateX(PI - 0.2);
     rotateY(PI / 2);
-
     
     for(let z = 0; z < width; z += rect_width) {
         for(let x = 0; x < width; x += rect_width) {
@@ -48,7 +50,7 @@ function draw() {
             let offset = map(distance, 0, maxDistance, 5, -5);
             //create rectangle height and map it to new range, points 1 and -1 gives sin wave
             const rect_height = map(sin(angle + offset), -1, 1, 0, 200);
-            //number of materials in the visual
+            //material type and color
             ambientMaterial(255,209,49);
             //create the view with user perspective 
             let xCoord = (x - width);

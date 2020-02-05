@@ -104,3 +104,113 @@
 .card:hover .project-name, .card:hover .desc, .card:hover .seperator, .card:hover .lang, .card:hover .count{
     color: #fff;
 }
+
+/* responsive styles */
+/* Max - 320px */
+@media only screen and (max-width: 320px) {
+    .head {font-size: 25px;}
+    .sub-container {
+        width: 85%;
+        flex-grow: 9;
+        margin: 0 auto;
+    }
+    .project-name {
+        margin-top: 0;
+        font-size: 15px;
+        padding: 2%;
+    }
+    .desc{
+        font-size: 12px;
+        padding: 4% 6% 4% 6%;
+    }
+    .seperator {
+        margin: 1% auto;
+    }
+    .lang{
+        font-size: 11px;
+    }
+}
+
+/* 321px to 375px */
+@media only screen and (min-width: 321px) and (max-width: 375px) {
+    .head {font-size: 28px;}
+    .sub-container {
+        width: 100%;
+        flex-grow: 9;
+        margin: 0 auto;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-gap: 14px;
+        padding: 14px;
+    }
+    .project-name {
+        margin-top: 0;
+        font-size: 14px;
+        padding: 5% 2%;
+    }
+    .desc{
+        font-size: 11px;
+        padding: 4% 6% 4% 6%;
+    }
+    .seperator {
+        margin: 1% auto;
+    }
+    .lang{
+        font-size: 11px;
+        margin: 5px auto 7px;
+    }
+}
+
+/* 376px to 425px */
+@media only screen and (min-width: 376px) and (max-width: 425px) {
+    .head {font-size: 28px;}
+    .sub-container {
+        width: 95%;
+        flex-grow: 9;
+        margin: 0 auto;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-gap: 16px;
+        padding: 16px;
+    }
+    .project-name {
+        margin-top: 2%;
+        font-size: 15px;
+        padding: 2%;
+    }
+    .desc{
+        font-size: 12px;
+        padding: 4% 6% 4% 6%;
+    }
+    .seperator {
+        margin: 1% auto;
+    }
+    .lang{
+        font-size: 12px;
+        margin: 5px auto 9px;
+    }
+}
+
+/* 426px to 768px */
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+    .head {font-size: 28px;}
+    .sub-container {
+        width: 95%;
+        flex-grow: 9;
+        margin: 0 auto;
+        grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+        grid-gap: 16px;
+        padding: 16px;
+    }
+    .project-name {
+        margin-top: 2%;
+        font-size: 16px;
+        padding: 2%;
+    }
+}
+
+/* 769px to 1024px */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .sub-container {
+        width: 90%;
+        flex-grow: 9;
+    }
+}

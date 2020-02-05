@@ -45,9 +45,122 @@
     flex-flow: column wrap;
 }
 
-/* canvas styling */
+#sketch-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-/* #bodyId canvas#defaultCanvas0.p5Canvas {
-    position: relative;
-    top: 0;
-} */
+/* responsive styles */
+/* Max - 320px */
+@media only screen and (max-width: 320px) {
+    .head {font-size: 25px;}
+    .sub-container {
+        flex-grow: 9;
+    }
+    .detail-con {
+        margin: 10% auto 0;
+        width: 85%;
+        flex-flow: column wrap;
+    }
+    .details{
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 7%;
+    }
+    .small-text{
+        font-size: 12px;
+    }
+    .big-text{
+        font-size: 18px;
+    }
+}
+
+/* 321px to 375px */
+@media only screen and (min-width: 321px) and (max-width: 375px) {
+    .head {font-size: 28px;}
+    .sub-container {
+        flex-grow: 9;
+    }
+    .detail-con {
+        margin: 2% auto 0;
+        width: 85%;
+        flex-flow: column wrap;
+    }
+    .details{
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 7%;
+    }
+    .small-text{
+        font-size: 12px;
+    }
+    .big-text{
+        font-size: 18px;
+    }
+}
+
+/* 376px to 425px */
+@media only screen and (min-width: 376px) and (max-width: 425px) {
+    .head {font-size: 28px;}
+    .sub-container {
+        flex-grow: 9;
+    }
+    .detail-con {
+        margin: 10% auto 0;
+        width: 85%;
+        flex-flow: column wrap;
+    }
+    .details{
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 7%;
+    }
+    .small-text{
+        font-size: 14px;
+    }
+    .big-text{
+        font-size: 20px;
+    }
+}
+
+/* 426px to 768px */
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+    .head {font-size: 28px;}
+    .sub-container {
+        flex-grow: 7;
+    }
+    .detail-con {
+        margin: 1% auto 0;
+        width: 85%;
+        flex-flow: column wrap;
+    }
+    .details{
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 2%;
+    }
+    .small-text{
+        font-size: 14px;
+    }
+    .big-text{
+        font-size: 20px;
+    }
+
+}
+
+/* 769px to 1024px */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .detail-con {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .small-text{
+        font-size: 14px;
+    }
+    .big-text {
+        font-size: 2.8vw;
+    }
+
+}
