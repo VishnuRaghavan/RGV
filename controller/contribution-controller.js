@@ -7,11 +7,10 @@ const fetch = require("cross-fetch");
  * @param {*} res 
  */
 const handleContriUi = (req, res) => {
-  const url = "https://api.github.com/users/VishnuRaghavan/starred";
+  const url = "https://api.github.com/users/VishnuRaghavan/starred?username=VishnuRaghavan";
   fetch(url, {
     headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `token ${process.env.GIT_TOKEN}` 
+      'Content-Type': 'application/json'
     }})
     .then(data => {
       data.json()

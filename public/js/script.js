@@ -41,5 +41,9 @@ $(document).ready(() => {
         window.open(url, '_blank');
     });
 
+    $('.back').click(() => {
+        location.href = '/home';
+    });
+
 
 });

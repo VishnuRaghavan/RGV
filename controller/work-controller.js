@@ -8,11 +8,10 @@ const fetch = require("cross-fetch");
  * @param {public} visibility 
  */
 const handleWorkUi = (req, res) => {
-  const url = "https://api.github.com/users/VishnuRaghavan/repos?visibility=public";
+  const url = "https://api.github.com/users/VishnuRaghavan/repos?visibility=public?username=VishnuRaghavan";
   fetch(url, {
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `token ${process.env.GIT_TOKEN}` 
     }})
     .then(data => {
       data.json()

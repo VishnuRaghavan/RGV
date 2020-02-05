@@ -27,7 +27,7 @@ function windowResized() {
 }
 
 function draw() {
-    background(255,209,49,255);
+    background('#fff350');
     // set up ligthing 
     let locX = mouseX - height / 2;
     let locY = mouseY - width / 2;
