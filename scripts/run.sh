@@ -4,4 +4,4 @@
 # fi
 
 cd ~/source
-pm2 restart server.js
+pm2 stop server.js; pm2 start server.js
